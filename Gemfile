@@ -41,7 +41,7 @@ gem 'rolify'
 gem 'cancan'
 gem 'mongoid_slug'
 gem 'select2-rails'
-gem 'newrelic_rpm', "~> 3.5.5.38"
+gem 'newrelic_rpm'
 gem 'switch_user'
 gem 'paperclip'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'

@@ -260,7 +260,7 @@ DEPENDENCIES
   mongoid
   mongoid-paperclip
   mongoid_slug
-  newrelic_rpm (~> 3.5.5.38)
+  newrelic_rpm
   paperclip
   pry
   pry-nav
