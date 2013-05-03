@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'pry'
+  gem 'pry-nav'
   gem 'capybara'
   gem 'database_cleaner'
   gem "rspec-rails"
@@ -27,14 +29,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'activeadmin-mongoid',  git: "git://github.com/elia/activeadmin-mongoid.git"
+gem 'activeadmin', '~> 0.6.0'
 gem 'jquery-rails'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
 gem 'jbuilder'
 gem 'haml'
-gem 'pry'
-gem 'pry-nav'
 gem 'rolify'
 gem 'cancan'
 gem 'mongoid_slug'
@@ -44,7 +46,6 @@ gem 'switch_user'
 gem 'paperclip'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'aws-sdk'
-gem 'kaminari'
 
 
 
