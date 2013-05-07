@@ -2,22 +2,32 @@ class Product
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :name
+  field :title
   field :description
   field :price
   field :tags
 
-  has_many :patterns
-  has_many :photos
+  has_many :line_items, dependent: :destroy
+  has_many :patterns, dependent: :destroy
+  has_many :photos, dependent: :destroy
+  
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :users
 
-  validates :name, presence: true
+  validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
 
+  before_destroy :check_if_purchased
+
   def to_param
     slug
+  end
+
+  private
+
+  def check_if_purchased
+
   end
 
 end

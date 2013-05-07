@@ -9,4 +9,12 @@
     = csrf_meta_tags
   %body
     #wrapper
+      %ul
+        %li= link_to "My Account", "#"
+        %li= link_to "Sign In", "#"
+        %li= link_to "Create Account", "#"
+        %li= link_to "Cart", carts_path
+      %ul
+        %li= link_to "Home", root_path
+        %li= link_to "Patterns", products_path
       = yield

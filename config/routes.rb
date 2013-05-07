@@ -8,6 +8,8 @@ Emtnest::Application.routes.draw do
 
   devise_for :users
 
+  resources :carts
+
   resources :products do
     resources :patterns
     resources :photos
