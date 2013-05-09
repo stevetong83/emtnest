@@ -3,3 +3,8 @@ Coming Soon!
 
 %p
   = link_to "Patterns", products_path
+
+%h2 Patterns
+
+- @products.each do |pattern|
+  %p= pattern.title

@@ -6,6 +6,7 @@ class Product
   field :description
   field :price
   field :tags
+  field :category_ids
 
   has_many :line_items, dependent: :destroy
   has_many :patterns, dependent: :destroy
@@ -23,9 +24,7 @@ class Product
 
   before_destroy :check_if_purchased
 
-  def to_param
-    slug
-  end
+  scope :newest, order_by('created_at DESC')
 
   private
 

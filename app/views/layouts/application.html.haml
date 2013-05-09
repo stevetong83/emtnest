@@ -17,4 +17,8 @@
       %ul
         %li= link_to "Home", root_path
         %li= link_to "Patterns", products_path
+
+      %ul
+        - @categories.each do |category|
+          %li= link_to category.name.titleize, '#'
       = yield
