@@ -11,19 +11,18 @@
     #wrapper
       #header
         #logo
-          %h1 Emtnest Embroidery Patterns and Designs
+          %h1= link_to "Emtnest Embroidery Patterns and Designs", root_path
         #account
-          %ul
-            %li= link_to "My Account", "#"
-            %li= link_to "Sign In", "#"
-            %li= link_to "Create Account", "#"
-            %li= link_to "Cart", carts_path
+          = render 'shared/account_navigation'
         #navbar
           %ul
             %li= link_to "Home", root_path
             %li= link_to "Patterns", products_path
       #main
         #sidebar
+          = form_tag root_path, method: 'get' do
+            = text_field_tag :search, params[:search], placeholder: "Search Patterns"
+            = submit_tag "Search", name: nil, class: 'btn'
           %ul
             - @categories.each do |category|
               %li= link_to category.name.titleize, '#'
@@ -33,6 +32,6 @@
         %ul
           %li= link_to "Home", "#"
           %li= link_to "Contact", "#"
-        Copyright 2013 
         = link_to "EMTnest.com", root_path
+        &copy; 2013
       

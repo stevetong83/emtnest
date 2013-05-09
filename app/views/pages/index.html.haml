@@ -3,4 +3,4 @@ Coming Soon!
 %h2 Patterns
 
 - @products.each do |pattern|
-  %p= pattern.title
+  %p= link_to pattern.title, product_path(pattern)

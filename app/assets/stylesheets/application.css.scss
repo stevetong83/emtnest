@@ -23,6 +23,12 @@ body {
 ul {padding: 0; margin: 0;}
 li {padding:0; margin:0; list-style-type:none;}
 
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 #wrapper {
   max-width: 960px;
   width: 100%;
@@ -66,4 +72,7 @@ li {padding:0; margin:0; list-style-type:none;}
 #footer {
   clear: both;
   text-align: center;
+  li {
+    display: inline;
+  }
 }

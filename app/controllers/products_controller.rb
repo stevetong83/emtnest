@@ -6,6 +6,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
-    @page_title = "#{@product.name} Embroidery Design Pattern"
+    @page_title = "#{@product.title} Machine Embroidery Design Pattern"
   end
 end

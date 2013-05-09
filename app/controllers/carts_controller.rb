@@ -10,6 +10,8 @@ class CartsController < ApplicationController
   end
 
   def destroy
-
+    @cart = current_cart
+    @cart.destroy
+    redirect_to root_path, notice: "There are no items in your cart"
   end
 end
