@@ -9,16 +9,30 @@
     = csrf_meta_tags
   %body
     #wrapper
-      %ul
-        %li= link_to "My Account", "#"
-        %li= link_to "Sign In", "#"
-        %li= link_to "Create Account", "#"
-        %li= link_to "Cart", carts_path
-      %ul
-        %li= link_to "Home", root_path
-        %li= link_to "Patterns", products_path
-
-      %ul
-        - @categories.each do |category|
-          %li= link_to category.name.titleize, '#'
-      = yield
+      #header
+        #logo
+          %h1 Emtnest Embroidery Patterns and Designs
+        #account
+          %ul
+            %li= link_to "My Account", "#"
+            %li= link_to "Sign In", "#"
+            %li= link_to "Create Account", "#"
+            %li= link_to "Cart", carts_path
+        #navbar
+          %ul
+            %li= link_to "Home", root_path
+            %li= link_to "Patterns", products_path
+      #main
+        #sidebar
+          %ul
+            - @categories.each do |category|
+              %li= link_to category.name.titleize, '#'
+        #content
+          = yield
+      #footer
+        %ul
+          %li= link_to "Home", "#"
+          %li= link_to "Contact", "#"
+        Copyright 2013 
+        = link_to "EMTnest.com", root_path
+      

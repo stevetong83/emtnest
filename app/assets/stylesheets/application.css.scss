@@ -20,11 +20,50 @@ body {
   margin: 0;
 }
 
+ul {padding: 0; margin: 0;}
+li {padding:0; margin:0; list-style-type:none;}
+
 #wrapper {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 25px;
+  padding: 25px 0;
   border: 1px solid #ccc;
   background: $white;
+}
+
+#header {
+  #logo {
+    float: left;
+  }
+  #account {
+    float: right;
+    li {
+      display: inline;
+    }
+  }
+  #navbar {
+    clear: both;
+    li {
+      display: inline;
+    }
+  }
+}
+
+#main {
+  padding: 25px;
+  #sidebar {
+    float: left;
+    width: 15%;
+  }
+  #content {
+    float: right;
+    width: 75%;
+  }
+
+}
+
+#footer {
+  clear: both;
+  text-align: center;
 }
