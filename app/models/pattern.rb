@@ -2,6 +2,7 @@ class Pattern
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  field :pattern
   field :version
   field :description
 

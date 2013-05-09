@@ -20,18 +20,21 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+
+  gem 'jquery-rails'
+  gem 'jquery-ui-rails'
+  gem 'jquery-ui-themes'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
 
+gem 'activeadmin', '0.5.1'
 gem 'activeadmin-mongoid',  git: "git://github.com/elia/activeadmin-mongoid.git"
-gem 'activeadmin', '~> 0.6.0'
-gem 'jquery-rails'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'devise'
@@ -39,10 +42,9 @@ gem 'jbuilder'
 gem 'haml'
 gem 'rolify'
 gem 'cancan'
-gem 'mongoid_slug'
+# gem 'mongoid_slug'
 gem 'select2-rails'
 gem 'newrelic_rpm'
-gem 'switch_user'
 gem 'paperclip'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'aws-sdk'

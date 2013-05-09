@@ -14,6 +14,9 @@ class Product
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :users
 
+  accepts_nested_attributes_for :patterns
+  accepts_nested_attributes_for :photos
+
   validates :title, presence: true
   validates :description, presence: true
   validates :price, presence: true
