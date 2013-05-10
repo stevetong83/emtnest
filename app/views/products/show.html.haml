@@ -5,3 +5,5 @@ ID:
 = @product.id
 Description: 
 = @product.description
+
+= link_to "Add to Cart", line_items_path(product_id: @product), method: 'post'

@@ -5,9 +5,9 @@ class LineItemsController < ApplicationController
     product = Product.find params[:product_id]
     @line_item = @cart.line_items.build(product: product)
     if @line_item.save
-      redirect_to :back, notice: "Line item created"
+      redirect_to :back, notice: "Product has been added to cart"
     else
-      render :new
+      redirect_to :back, error: "Unable to add to cart"
     end
   end
 

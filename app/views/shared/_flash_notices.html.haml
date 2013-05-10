@@ -1,0 +1,8 @@
+- if flash[:notice]
+  #success_message
+    .close-x
+    = flash[:notice]
+- if flash[:error]
+  #error_message
+    .close-x
+    = flash[:error]

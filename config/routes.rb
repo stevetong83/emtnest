@@ -12,6 +12,8 @@ Emtnest::Application.routes.draw do
 
   resources :carts
 
+  resources :line_items
+
   resources :products do
     resources :patterns
     resources :photos
