@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :photo do
     name "MyString"
+    association :product
   end
 end

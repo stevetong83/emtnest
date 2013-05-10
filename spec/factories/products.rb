@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :product do
-    name "My Product"
+    title "My Product"
+    price "1.00"
   end
 end
